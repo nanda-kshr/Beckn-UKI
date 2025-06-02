@@ -1,11 +1,11 @@
-# UKI Implementation Guide - Soil Testing
+# uki Implementation Guide - Soil Testing
 
 
 ## Introduction
 
-This document provides material that helps network participants build and integrate their application with the Beckn Network for Soil Testing services. This document is part of the starter kit that provides information about the use case of "Soil Testing" in the Unified Krishi Interface (UKI) domain.
+This document provides material that helps network participants build and integrate their application with the Beckn Network for Soil Testing services. This document is part of the starter kit that provides information about the use case of "Soil Testing" in the Unified Krishi Interface (uki) domain.
 
-The use case involves farmers discovering and booking soil testing services from certified laboratories, with options for sample collection, testing, and advisory recommendations through the UKI network powered by Beckn Protocol.
+The use case involves farmers discovering and booking soil testing services from certified laboratories, with options for sample collection, testing, and advisory recommendations through the uki network powered by Beckn Protocol.
 
 ## Structure of the document
 
@@ -54,7 +54,7 @@ This document has the following parts:
 
 1. **Ravi**, a cotton farmer from Wardha, Maharashtra, notices declining crop yields and suspects soil nutrient deficiency. He wants to get his soil tested to understand fertilizer requirements.
 
-2. Using a **UKI-enabled farmer app**, Ravi searches for soil testing services by entering:
+2. Using a **uki-enabled farmer app**, Ravi searches for soil testing services by entering:
    - **Location**: His farm coordinates or village name
    - **Test Type**: NPK analysis, pH testing, micronutrient analysis
    - **Collection Method**: Home pickup or drop-off at lab
@@ -169,7 +169,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "search",
     "location": {
       "country": {
@@ -254,7 +254,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "search",
     "location": {
       "country": {
@@ -321,7 +321,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_search",
     "location": {
       "country": {
@@ -605,7 +605,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "select",
     "location": {
       "country": {
@@ -673,7 +673,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_select",
     "location": {
       "country": {
@@ -781,7 +781,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "init",
     "location": {
       "country": {
@@ -864,7 +864,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_init",
     "location": {
       "country": {
@@ -1013,7 +1013,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "confirm",
     "location": {
       "country": {
@@ -1107,7 +1107,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_confirm",
     "location": {
       "country": {
@@ -1250,7 +1250,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "status",
     "location": {
       "country": {
@@ -1284,7 +1284,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_status",
     "location": {
       "country": {
@@ -1353,7 +1353,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_status",
     "location": {
       "country": {
@@ -1434,7 +1434,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "support",
     "location": {
       "country": {
@@ -1468,7 +1468,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_support",
     "location": {
       "country": {
@@ -1507,7 +1507,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "rating",
     "location": {
       "country": {
@@ -1552,7 +1552,7 @@ Beckn is an asynchronous protocol at its core.
 ```json
 {
   "context": {
-    "domain": "services:uai",
+    "domain": "services:uki",
     "action": "on_rating",
     "location": {
       "country": {
@@ -1765,7 +1765,7 @@ Beckn is an asynchronous protocol at its core.
 ## Links to Resources
 
 - [Beckn Protocol Specification](https://developers.becknprotocol.io/)
-- [UKI Network Documentation](https://github.com/beckn/missions/tree/main/UAI)
+- [uki Network Documentation](https://github.com/beckn/missions/tree/main/uki)
 - [Soil Testing Standards](https://www.nabl-india.org/)
 
 ## Sandbox Details
@@ -1781,9 +1781,9 @@ Beckn is an asynchronous protocol at its core.
 
 ### Domain name:
 ```
-services:uai
+services:uki
 ```
 
 ---
 
-This comprehensive implementation guide provides developers with all necessary information to integrate soil testing services into the UKI network using the Beckn Protocol. The guide includes practical examples, real-world scenarios, and technical considerations for successful implementation.
+This comprehensive implementation guide provides developers with all necessary information to integrate soil testing services into the uki network using the Beckn Protocol. The guide includes practical examples, real-world scenarios, and technical considerations for successful implementation.
