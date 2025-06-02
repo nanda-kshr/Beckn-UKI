@@ -1764,20 +1764,19 @@ Beckn is an asynchronous protocol at its core.
 
 ## Links to Resources
 
-- [Beckn Protocol Specification](https://developers.becknprotocol.io/)
-- [uki Network Documentation](https://github.com/beckn/missions/tree/main/uki)
-- [Soil Testing Standards](https://www.nabl-india.org/)
+- [Beckn Protocol Specification](https://github.com/beckn/missions/)
+- [uki Network Documentation](https://github.com/beckn/missions/)
 
 ## Sandbox Details
 
 ### Registry/Gateway:
-- **Gateway Sandbox:** gateway-uki.becknprotocol.io
-- **Registry Sandbox:** registry-uki.becknprotocol.io
+- **Gateway Sandbox:** 
+- **Registry Sandbox:** 
 
 ### BPP:
-- **BPP Client Sandbox:** bpp-ps-client-sandbox-uki.becknprotocol.io
-- **BPP Network Sandbox:** bpp-ps-network-sandbox-uki.becknprotocol.io
-- **BPP Sandbox:** bpp-unified-sandbox-uki.becknprotocol.io
+- **BPP Client Sandbox:** 
+- **BPP Network Sandbox:** 
+- **BPP Sandbox:** 
 
 ### Domain name:
 ```
