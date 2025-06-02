@@ -50,7 +50,7 @@ This document has the following parts:
 
 ### **Network Architecture**
 
-![][image1]
+![image1](https://raw.githubusercontent.com/nanda-kshr/Beckn-UKI/5e143fb2c8cc026e98d7783bca57a6119dc03d14/local/images/bigpicture.png)
 
 ## 
 
