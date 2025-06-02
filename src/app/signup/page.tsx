@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { User, Phone, MapPin, ChevronDown, CheckCircle, AlertCircle, Loader } from 'lucide-react'
 
+import { Suspense } from 'react'
 interface FormData {
   name: string
   role: 'farmer' | 'buyer' | ''
@@ -115,6 +116,7 @@ export default function SignupPage() {
   const roleDesc = getRoleDescription()
 
   return (
+    <Suspense>
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12">
       <div className="max-w-2xl mx-auto px-6">
         {/* Header */}
@@ -382,5 +384,6 @@ export default function SignupPage() {
         </motion.div>
       </div>
     </div>
+    </Suspense>
   )
 }
