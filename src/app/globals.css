@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #2e7d32, #4caf50);
+  }
+  
+  .gradient-button {
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+  }
+  
+  .gradient-button-blue {
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+  }
+}
