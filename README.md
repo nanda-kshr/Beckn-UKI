@@ -54,20 +54,6 @@ This document has the following parts:
 
 ## 
 
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
 ## **Outcome Visualisation**
 
 ### **Use case \- Discovery and Booking of Soil Testing Services**
@@ -104,11 +90,6 @@ This document has the following parts:
    * **Crop suggestions** for his soil type  
 10. **Post-fulfillment**: Ravi rates the service and can access advisory support for implementing recommendations
 
-## 
-
-## 
-
-## 
 
 ## 
 
