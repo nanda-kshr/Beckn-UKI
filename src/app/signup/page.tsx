@@ -1,12 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { User, Phone, MapPin, ChevronDown, CheckCircle, AlertCircle, Loader } from 'lucide-react'
 
-import { Suspense } from 'react'
 interface FormData {
   name: string
   role: 'farmer' | 'buyer' | ''
@@ -15,7 +14,8 @@ interface FormData {
   state: string
 }
 
-export default function SignupPage() {
+// Separate component that uses useSearchParams
+function SignupForm() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [formData, setFormData] = useState<FormData>({
@@ -116,7 +116,6 @@ export default function SignupPage() {
   const roleDesc = getRoleDescription()
 
   return (
-    <Suspense>
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12">
       <div className="max-w-2xl mx-auto px-6">
         {/* Header */}
@@ -384,6 +383,47 @@ export default function SignupPage() {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+// Loading component for Suspense fallback
+function SignupFormLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12">
+      <div className="max-w-2xl mx-auto px-6">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-primary-600 mb-6">SoilConnect</h1>
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-200 rounded mb-4"></div>
+            <div className="h-4 bg-gray-200 rounded mb-2"></div>
+            <div className="h-4 bg-gray-200 rounded w-3/4 mx-auto"></div>
+          </div>
+        </div>
+        <div className="bg-white rounded-2xl shadow-2xl p-8">
+          <div className="animate-pulse space-y-6">
+            <div className="h-6 bg-gray-200 rounded"></div>
+            <div className="h-12 bg-gray-200 rounded"></div>
+            <div className="h-6 bg-gray-200 rounded"></div>
+            <div className="h-12 bg-gray-200 rounded"></div>
+            <div className="h-6 bg-gray-200 rounded"></div>
+            <div className="h-12 bg-gray-200 rounded"></div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="h-12 bg-gray-200 rounded"></div>
+              <div className="h-12 bg-gray-200 rounded"></div>
+            </div>
+            <div className="h-12 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Main component with Suspense wrapper
+export default function SignupPage() {
+  return (
+    <Suspense fallback={<SignupFormLoading />}>
+      <SignupForm />
     </Suspense>
   )
 }

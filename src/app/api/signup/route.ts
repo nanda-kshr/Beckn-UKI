@@ -46,8 +46,8 @@ export async function POST(request: NextRequest) {
     const db = client.db('soilconnect')
     const collection = db.collection('signups')
 
-    // Prepare document to insert with current timestamp
-    const currentTime = new Date('2025-06-02T20:53:06.000Z') // Current UTC time as provided
+    // Use the current timestamp provided: 2025-06-02 21:01:53 UTC
+    const currentTime = new Date('2025-06-02T21:01:53.000Z')
     
     const signupDoc = {
       ...data,
@@ -68,7 +68,12 @@ export async function POST(request: NextRequest) {
         buttonClicked: data.role === 'farmer' ? 'Join as Farmer' : 'Join as Buyer',
         expectedServices: data.role === 'farmer' ? 
           ['soil_testing', 'npk_analysis', 'ph_testing', 'micronutrient_analysis', 'organic_carbon_test'] :
-          ['provide_testing_services', 'farmer_outreach', 'laboratory_services', 'soil_analysis', 'consultation']
+          ['provide_testing_services', 'farmer_outreach', 'laboratory_services', 'soil_analysis', 'consultation'],
+        formCompletionTime: currentTime,
+        sessionInfo: {
+          submissionMethod: 'web_form',
+          deviceType: request.headers.get('user-agent')?.includes('Mobile') ? 'mobile' : 'desktop'
+        }
       }
     }
 
@@ -85,7 +90,10 @@ export async function POST(request: NextRequest) {
         welcomeMessage: data.role === 'farmer' ? 
           'Welcome as a Farmer | किसान के रूप में स्वागत है' :
           'Welcome as a Buyer | खरीदार के रूप में स्वागत है',
-        timestamp: currentTime.toISOString()
+        timestamp: currentTime.toISOString(),
+        nextSteps: data.role === 'farmer' ? 
+          'We will connect you with soil testing centers in your area | हम आपको आपके क्षेत्र के मिट्टी परीक्षण केंद्रों से जोड़ेंगे' :
+          'We will connect you with farmers who need soil testing services | हम आपको उन किसानों से जोड़ेंगे जिन्हें मिट्टी परीक्षण सेवाओं की आवश्यकता है'
       },
       { status: 201 }
     )
