@@ -1490,6 +1490,8 @@ Beckn is an asynchronous protocol at its core.
 
 ## Taxonomy and Layer 2 Configuration
 
+## Taxonomy and Layer 2 Configuration
+
 | **Property Name**       | **Enums**                                   |
 |--------------------------|---------------------------------------------|
 | **Soil Testing Categories** | BASIC_NPK_TEST, COMPREHENSIVE_TEST, PH_TEST, MICRONUTRIENT_TEST |
@@ -1500,7 +1502,10 @@ Beckn is an asynchronous protocol at its core.
 | **Payment Status**       | PENDING, PROCESSED, FAILED, REFUNDED       |
 | **Payment Type**         | PRE_ORDER, POST_ORDER, POST_FULFILLMENT    |
 | **Payment Collected By** | BAP, BPP, AGENT                            |
-| **Fulfillment Stop Types** | START, END                                |
+| **Fulfillment Stop Types** | START, END                                |                            |
+
+
+
 ## Challenges and Assumptions
 
 ### Technical Challenges
