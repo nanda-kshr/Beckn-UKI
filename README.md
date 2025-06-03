@@ -157,6 +157,7 @@ Beckn is an asynchronous protocol at its core.
 
 ### Discovery of Soil Testing Services
 
+
 #### search
 
 ```json
@@ -244,7 +245,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### on_search
 
-**Catalog response with multiple lab services**
 
 ```json
 {
@@ -528,7 +528,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### select
 
-**Selecting a specific soil testing service**
 
 ```json
 {
@@ -595,8 +594,6 @@ Beckn is an asynchronous protocol at its core.
 ```
 
 #### on_select
-
-**Quote response from selected provider**
 
 ```json
 {
@@ -704,8 +701,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### init
 
-**Initialize order with customer details**
-
 ```json
 {
   "context": {
@@ -786,8 +781,6 @@ Beckn is an asynchronous protocol at its core.
 ```
 
 #### on_init
-
-**Payment terms and order confirmation details**
 
 ```json
 {
@@ -936,8 +929,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### confirm
 
-**Final order confirmation**
-
 ```json
 {
   "context": {
@@ -1029,8 +1020,6 @@ Beckn is an asynchronous protocol at its core.
 ```
 
 #### on_confirm
-
-**Order confirmed with tracking details**
 
 ```json
 {
@@ -1173,8 +1162,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### status
 
-**Track order status**
-
 ```json
 {
   "context": {
@@ -1205,9 +1192,7 @@ Beckn is an asynchronous protocol at its core.
 }
 ```
 
-#### on_status (Multiple status updates)
-
-**Status: Sample collected**
+#### on_status
 
 ```json
 {
@@ -1357,8 +1342,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### support
 
-**Request support**
-
 ```json
 {
   "context": {
@@ -1390,8 +1373,6 @@ Beckn is an asynchronous protocol at its core.
 ```
 
 #### on_support
-
-**Support contact details**
 
 ```json
 {
@@ -1429,8 +1410,6 @@ Beckn is an asynchronous protocol at its core.
 ```
 
 #### rating
-
-**Rate the service**
 
 ```json
 {
@@ -1475,8 +1454,6 @@ Beckn is an asynchronous protocol at its core.
 
 #### on_rating
 
-**Rating acknowledgment with feedback form**
-
 ```json
 {
   "context": {
@@ -1513,46 +1490,17 @@ Beckn is an asynchronous protocol at its core.
 
 ## Taxonomy and Layer 2 Configuration
 
-### Service Categories
-
-| Category Code | Name | Description |
-|---------------|------|-------------|
-| soil-testing | Soil Testing Services | Laboratory analysis of soil samples |
-| soil-health-advisory | Soil Health Advisory | Consultation and recommendations based on soil tests |
-
-### Test Parameter Taxonomy
-
-| Parameter Code | Name | Description |
-|----------------|------|-------------|
-| nitrogen | Available Nitrogen | Nitrogen content in soil |
-| phosphorus | Available Phosphorus | Phosphorus content in soil |
-| potassium | Available Potassium | Potassium content in soil |
-| ph-level | Soil pH | Acidity/alkalinity of soil |
-| organic-carbon | Organic Carbon | Organic matter content |
-| micronutrients | Micronutrients | Zn, Fe, Mn, Cu, B, S analysis |
-| soil-texture | Soil Texture | Clay, silt, sand composition |
-| electrical-conductivity | EC | Soil salinity measurement |
-
-### Fulfillment Types
-
-| Type Code | Name | Description |
-|-----------|------|-------------|
-| home-collection | Home Collection | Agent visits farm to collect samples |
-| drop-off | Drop-off | Farmer brings samples to lab |
-| mobile-lab | Mobile Lab | Lab vehicle visits farm |
-
-### Order Status Codes
-
-| Status Code | Name | Description |
-|-------------|------|-------------|
-| CONFIRMED | Order Confirmed | Lab has confirmed the order |
-| AGENT-ASSIGNED | Agent Assigned | Collection agent assigned |
-| SAMPLE-COLLECTED | Sample Collected | Soil samples collected from farm |
-| RECEIVED-AT-LAB | Received at Lab | Samples received at laboratory |
-| TESTING-IN-PROGRESS | Testing in Progress | Laboratory analysis ongoing |
-| COMPLETED | Completed | Test results ready |
-| CANCELLED | Cancelled | Order cancelled |
-
+| **Property Name**       | **Enums**                                   |
+|--------------------------|---------------------------------------------|
+| **Soil Testing Categories** | BASIC_NPK_TEST, COMPREHENSIVE_TEST, PH_TEST, MICRONUTRIENT_TEST |
+| **Fulfillment Type**     | HOME_COLLECTION, DROP_OFF, DIGITAL_REPORT   |
+| **Property Type**        | RESIDENTIAL, AGRICULTURAL, COMMERCIAL_FARM, INDUSTRIAL_LAND |
+| **Fulfillment State**    | SAMPLE_COLLECTED, IN_TESTING, RESULTS_READY, COMPLETED, CANCELLED |
+| **Stop Types**           | COLLECTION_POINT, LABORATORY, FARM_LOCATION |
+| **Payment Status**       | PENDING, PROCESSED, FAILED, REFUNDED       |
+| **Payment Type**         | PRE_ORDER, POST_ORDER, POST_FULFILLMENT    |
+| **Payment Collected By** | BAP, BPP, AGENT                            |
+| **Fulfillment Stop Types** | START, END                                |
 ## Challenges and Assumptions
 
 ### Technical Challenges
