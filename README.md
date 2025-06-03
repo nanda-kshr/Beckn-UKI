@@ -142,24 +142,22 @@ Beckn is an asynchronous protocol at its core.
 ### DOFP Flow for Soil Testing
 
 #### Discovery Phase
-![](https://raw.githubusercontent.com/beckn/missions/refs/heads/main/UAI/Images/Sales/uai-sales-discovery.jpg)
+![ ](https://raw.githubusercontent.com/nanda-kshr/Beckn-UKI/refs/heads/main/local/images/uki-sales-discovery.png)
 
 #### Order Phase
-![ ](https://raw.githubusercontent.com/beckn/missions/refs/heads/main/UAI/Images/Sales/uai-sales-order.jpg)
+![ ](https://raw.githubusercontent.com/nanda-kshr/Beckn-UKI/refs/heads/main/local/images/uki-sales-order.png)
 
 #### Fulfillment Phase
-![ ](https://raw.githubusercontent.com/beckn/missions/refs/heads/main/UAI/Images/Sales/uai-sales-fulfilment.jpg)
+![ ](https://raw.githubusercontent.com/nanda-kshr/Beckn-UKI/refs/heads/main/local/images/uki-sales-fulfilment.png)
 
 #### Post-Fulfillment Phase
-![ ](https://raw.githubusercontent.com/beckn/missions/refs/heads/main/UAI/Images/Sales/uai-sales-post%20fulfilment.jpg)
+![ ](https://raw.githubusercontent.com/nanda-kshr/Beckn-UKI/refs/heads/main/local/images/uki-sales-post%20fulfilment.jpg)
 
 ## API Calls and Schema
 
 ### Discovery of Soil Testing Services
 
 #### search
-
-**Search by test type and location**
 
 ```json
 {
@@ -235,71 +233,6 @@ Beckn is an asynchronous protocol at its core.
             "location": {
               "gps": "20.7489, 78.6085",
               "address": "Village Karanja, Wardha District"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
-**Search with price filter and collection preference**
-
-```json
-{
-  "context": {
-    "domain": "services:uki",
-    "action": "search",
-    "location": {
-      "country": {
-        "name": "India",
-        "code": "IND"
-      },
-      "city": {
-        "name": "Wardha",
-        "code": "std:07152"
-      }
-    },
-    "version": "1.1.0",
-    "bap_id": "farmer-app.uki.com",
-    "bap_uri": "https://farmer-app.uki.com",
-    "transaction_id": "soil-test-002",
-    "message_id": "msg-002",
-    "timestamp": "2025-06-02T19:07:25Z"
-  },
-  "message": {
-    "intent": {
-      "category": {
-        "descriptor": {
-          "code": "soil-testing"
-        }
-      },
-      "item": {
-        "price": {
-          "currency": "INR",
-          "maximum_value": "800"
-        }
-      },
-      "fulfillment": {
-        "type": "home-collection",
-        "stops": [
-          {
-            "type": "collection-location",
-            "location": {
-              "circle": {
-                "gps": "20.7489, 78.6085",
-                "radius": {
-                  "unit": "km",
-                  "value": "15"
-                }
-              }
-            },
-            "time": {
-              "range": {
-                "start": "2025-06-03T09:00:00Z",
-                "end": "2025-06-05T18:00:00Z"
-              }
             }
           }
         ]
