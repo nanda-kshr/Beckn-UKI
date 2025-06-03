@@ -8,8 +8,6 @@ import AgriFloatingElements from '@/components/FloatingElements'
 import AnimatedCounter from '@/components/AnimatedCounter'
 import { 
   Beaker, 
-  MapPin, 
-  Clock, 
   Star, 
   TrendingUp, 
   Shield,
@@ -20,10 +18,7 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  Wheat,
   Leaf,
-  Droplets,
-  Sun
 } from 'lucide-react'
 
 export default function Home() {
@@ -112,11 +107,10 @@ export default function Home() {
               className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed mb-12"
             >
               <span className="block mb-4 text-yellow-200">
-                प्रमाणित मिट्टी परीक्षण केंद्रों से जुड़ें और अधिकतम फसल उत्पादन के लिए सटीक विश्लेषण प्राप्त करें
+                खुले कृषि नेटवर्क के माध्यम से किसानों, सेवा प्रदाताओं और कृषि विशेषज्ञों को जोड़ना
               </span>
               <span className="text-lg text-green-200">
-                Connecting farmers with certified soil testing centers for comprehensive NPK, pH, and micronutrient analysis to maximize crop yields
-              </span>
+                An open agriculture network connecting farmers, service providers, and agricultural experts through unified digital commerce protocols</span>
             </motion.p>
 
             <motion.div
@@ -232,19 +226,15 @@ export default function Home() {
                 className="space-y-6 text-lg md:text-xl text-gray-600 max-w-5xl mx-auto leading-relaxed"
               >
                 <p className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <span className="font-semibold text-green-800">For Farmers:</span> Get accurate soil analysis to maximize your crop yield and make informed decisions about 
-                  fertilizers and crops. Our platform connects you with certified soil testing centers 
-                  that provide comprehensive NPK, pH, and micronutrient analysis.
+                  <span className="font-semibold text-green-800">For Farmers:</span> Get access to a wide network of agricultural service providers including soil testing, crop advisory, equipment rental, and input suppliers through our open digital marketplace
                   <br /><br />
-                  <span className="font-semibold text-green-700">किसानों के लिए:</span> अपनी फसल की पैदावार बढ़ाने के लिए मिट्टी का सटीक विश्लेषण प्राप्त करें। 
-                  हमारा प्लेटफॉर्म आपको प्रमाणित मिट्टी परीक्षण केंद्रों से जोड़ता है।
+                  <span className="font-semibold text-green-700">किसानों के लिए:</span> हमारे खुले डिजिटल बाज़ार के माध्यम से मिट्टी परीक्षण, फसल सलाह, उपकरण किराया और इनपुट आपूर्तिकर्ताओं सहित कृषि सेवा प्रदाताओं के व्यापक नेटवर्क तक पहुंच प्राप्त करें
                 </p>
                 
                 <p className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <span className="font-semibold text-blue-800">For Buyers/Testing Centers:</span> Connect with farmers who need reliable soil testing services. 
-                  Join our network to provide professional soil analysis and help improve agricultural productivity in your region.
+                  <span className="font-semibold text-blue-800">For Buyers/Testing Centers:</span> Join the open agriculture network and connect with farmers across regions. Offer your services - from soil testing to crop advisory, equipment rental to input supply - through standardized digital protocols
                   <br /><br />
-                  <span className="font-semibold text-blue-700">खरीदारों/परीक्षण केंद्रों के लिए:</span> उन किसानों से जुड़ें जिन्हें विश्वसनीय मिट्टी परीक्षण सेवाओं की आवश्यकता है।
+                  <span className="font-semibold text-blue-700">खरीदारों/परीक्षण केंद्रों के लिए:</span> खुले कृषि नेटवर्क में शामिल हों और विभिन्न क्षेत्रों के किसानों से जुड़ें। मानकीकृत डिजिटल प्रोटोकॉल के माध्यम से अपनी सेवाएं प्रदान करें
                 </p>
               </motion.div>
             </motion.div>
